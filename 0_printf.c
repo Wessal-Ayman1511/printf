@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 's')
 			{
-				char *s = va_arg(ptr, char*);
+				char *s = va_arg(ptr, char);
 
 				write(1, s, _strlen(s));
 				c += _strlen(s);
