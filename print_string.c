@@ -10,7 +10,7 @@ int print_string(va_list ptr)
 	int i, len;
 
 	s = va_arg(ptr, char *);
-	if (str == NULL)
+	if (s == NULL)
 	{
 		s = "(null)";
 		len = _len(s);
@@ -29,3 +29,4 @@ int print_string(va_list ptr)
 		}
 		return (len);
 	}
+}
