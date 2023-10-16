@@ -25,6 +25,12 @@ int print_int(va_list ptr)
 	{
 		while (nom / 10 != 0)
 		{
+			ex *= 10;
+			nom /= 10;
+		}
+		nom = n;
+		while (ex > 0)
+		{
 			digit = nom / ex;
 			_putchar(digit + '0');
 			nom -= (digit * ex);
