@@ -8,7 +8,7 @@ int print_int(va_list ptr)
 {
 	int n = va_arg(ptr, int);
 	int nom;
-	int j = 1, exp = 1;
+	int j = 1, ex = 1;
 	int digit, last_num = n % 10;
 
 	n = n / 10;
@@ -23,12 +23,12 @@ int print_int(va_list ptr)
 	}
 	if (nom > 0)
 	{
-		while (nom % 10 != 0)
+		while (nom / 10 != 0)
 		{
-			digit = nom / exp;
+			digit = nom / ex;
 			_putchar(digit + '0');
-			nom -= (digit * exp);
-			exp /= 10;
+			nom -= (digit * ex);
+			ex /= 10;
 			j++;
 		}
 	}
